@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>User Dashboard - Circular Economy Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body class="dashboard-page">
+
+<!-- Dashboard Header -->
+<header style="background:var(--dark);position:fixed;">
+  <div class="header-inner">
+    <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      
+      <span class="logo-text"><img src="assets/logo_white.webp" alt="">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    </nav>
+    <div class="dash-hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="dashboard-body">
+
+  <!-- Sidebar -->
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-header">
+      <button class="dash-close-btn" aria-label="Close menu">&times;</button>
+      <h3><span>♻</span> User Panel</h3>
+    </div>
+    <nav class="sidebar-menu">
+      <div class="menu-label">Main</div>
+      <a href="#dashboard" class="active"><i class="fas fa-th-large"></i> Dashboard</a>
+      <a href="#analytics"><i class="fas fa-chart-bar"></i> Analytics</a>
+      <a href="#projects"><i class="fas fa-project-diagram"></i> My Projects</a>
+      <a href="#resources"><i class="fas fa-book"></i> Resources</a>
+      <div class="menu-label">Account</div>
+      <a href="#profile"><i class="fas fa-user"></i> Profile</a>
+      <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+      <a href="#support"><i class="fas fa-headset"></i> Support</a>
+    </nav>
+    <button class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+  </aside>
+
+  <div class="dash-overlay"></div>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <section id="dashboard">
+      <div class="dashboard-topbar">
+        <div class="page-title">
+          <h2>User Dashboard</h2>
+          <p>Welcome back, John! Here's your circular impact overview.</p>
+        </div>
+        <div class="topbar-right">
+          <button class="notification-btn"><i class="fas fa-bell"></i><span class="dot"></span></button>
+          <div class="admin-profile">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect fill='%2352b788' width='32' height='32' rx='16'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18'>P</text></svg>" alt="User">
+            <span>John Doe</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Welcome Banner -->
+      <div class="dash-welcome">
+        <h2>Welcome to Your Circular Dashboard</h2>
+        <p>Track your personal environmental impact, manage projects, and access exclusive resources to accelerate your circular journey.</p>
+        <div class="quick-actions" style="margin-top:20px;">
+          <div class="quick-action"><i class="fas fa-leaf"></i><span>Log Impact</span></div>
+          <div class="quick-action"><i class="fas fa-chart-line"></i><span>View Report</span></div>
+          <div class="quick-action"><i class="fas fa-download"></i><span>Resources</span></div>
+          <div class="quick-action"><i class="fas fa-users"></i><span>Community</span></div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="dash-stats">
+        <div class="dash-stat-card animate-on-scroll">
+          <div class="stat-icon green"><i class="fas fa-recycle"></i></div>
+          <h3>156 kg</h3>
+          <p>Waste Diverted</p>
+          <span class="stat-change up">+12%</span>
+        </div>
+        <div class="dash-stat-card animate-on-scroll">
+          <div class="stat-icon blue"><i class="fas fa-leaf"></i></div>
+          <h3>45</h3>
+          <p>Eco-Actions Completed</p>
+          <span class="stat-change up">+8%</span>
+        </div>
+        <div class="dash-stat-card animate-on-scroll">
+          <div class="stat-icon orange"><i class="fas fa-tree"></i></div>
+          <h3>12</h3>
+          <p>Trees Planted</p>
+          <span class="stat-change up">+3</span>
+        </div>
+        <div class="dash-stat-card animate-on-scroll">
+          <div class="stat-icon purple"><i class="fas fa-star"></i></div>
+          <h3>1,280</h3>
+          <p>Impact Points</p>
+          <span class="stat-change up">+230</span>
+        </div>
+      </div>
+
+      <!-- Analytics & Activity -->
+      <div class="dash-grid-2">
+        <div class="dash-card">
+          <div class="card-header"><h3>My Impact Analytics</h3><a href="#">View Full Report</a></div>
+          <div style="height:250px;display:flex;align-items:center;justify-content:center;background:var(--light);border-radius:12px;color:var(--gray);font-size:1.1rem;">
+            <div style="text-align:center;"><i class="fas fa-chart-area" style="font-size:3rem;color:var(--secondary);display:block;margin-bottom:10px;"></i> Impact Chart Visualization</div>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="card-header"><h3>Recent Activity</h3><a href="#">View All</a></div>
+          <ul class="activity-list">
+            <li><div class="activity-icon green"><i class="fas fa-check"></i></div><div class="activity-text"><p>Completed waste audit for home</p><span>2 hours ago</span></div></li>
+            <li><div class="activity-icon blue"><i class="fas fa-download"></i></div><div class="activity-text"><p>Downloaded Circular Economy Guide</p><span>Yesterday</span></div></li>
+            <li><div class="activity-icon orange"><i class="fas fa-trophy"></i></div><div class="activity-text"><p>Earned 'Green Starter' badge</p><span>2 days ago</span></div></li>
+            <li><div class="activity-icon green"><i class="fas fa-leaf"></i></div><div class="activity-text"><p>Planted a tree through partnership</p><span>3 days ago</span></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="dash-grid-3">
+        <div class="dash-card">
+          <div class="card-header"><h3>Learning Resources</h3></div>
+          <ul class="activity-list">
+            <li><div class="activity-icon blue"><i class="fas fa-file-pdf"></i></div><div class="activity-text"><p>Circular Economy 101 Guide</p><span>Free</span></div></li>
+            <li><div class="activity-icon green"><i class="fas fa-video"></i></div><div class="activity-text"><p>Webinar: Waste to Value</p><span>Available</span></div></li>
+            <li><div class="activity-icon orange"><i class="fas fa-book"></i></div><div class="activity-text"><p>Sustainable Living E-Book</p><span>Premium</span></div></li>
+          </ul>
+        </div>
+        <div class="dash-card">
+          <div class="card-header"><h3>Upcoming Events</h3></div>
+          <ul class="activity-list">
+            <li><div class="activity-icon blue"><i class="fas fa-calendar"></i></div><div class="activity-text"><p>Circular Economy Summit 2026</p><span>Aug 15-17</span></div></li>
+            <li><div class="activity-icon green"><i class="fas fa-users"></i></div><div class="activity-text"><p>Community Clean-Up Drive</p><span>Jul 25</span></div></li>
+            <li><div class="activity-icon orange"><i class="fas fa-chalkboard"></i></div><div class="activity-text"><p>Workshop: Circular Design</p><span>Jul 30</span></div></li>
+          </ul>
+        </div>
+        <div class="dash-card">
+          <div class="card-header"><h3>My Badges</h3></div>
+          <div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:center;padding:15px 0;">
+            <div style="text-align:center;"><i class="fas fa-seedling" style="font-size:2.5rem;color:var(--secondary);"></i><p style="font-size:0.75rem;color:var(--gray);margin-top:5px;">Green Starter</p></div>
+            <div style="text-align:center;"><i class="fas fa-recycle" style="font-size:2.5rem;color:#2196F3;"></i><p style="font-size:0.75rem;color:var(--gray);margin-top:5px;">Recycler</p></div>
+            <div style="text-align:center;"><i class="fas fa-tree" style="font-size:2.5rem;color:#ffa726;"></i><p style="font-size:0.75rem;color:var(--gray);margin-top:5px;">Tree Planter</p></div>
+            <div style="text-align:center;"><i class="fas fa-star" style="font-size:2.5rem;color:#9c27b0;"></i><p style="font-size:0.75rem;color:var(--gray);margin-top:5px;">Eco Champion</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analytics -->
+    <section id="analytics" style="display:none;">
+      <div class="dashboard-topbar">
+        <div class="page-title">
+          <h2>My Analytics</h2>
+          <p>Track your personal environmental impact and activity.</p>
+        </div>
+        <div class="topbar-right">
+          <button class="notification-btn"><i class="fas fa-bell"></i><span class="dot"></span></button>
+          <div class="admin-profile">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect fill='%2352b788' width='32' height='32' rx='16'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18'>J</text></svg>" alt="User">
+            <span>John Doe</span>
+          </div>
+        </div>
+      </div>
+      <div class="dash-stats">
+        <div class="dash-stat-card">
+          <div class="stat-icon green"><i class="fas fa-recycle"></i></div>
+          <h3>156 kg</h3>
+          <p>Waste Diverted</p>
+          <span class="stat-change up">+12%</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon blue"><i class="fas fa-leaf"></i></div>
+          <h3>45</h3>
+          <p>Eco-Actions</p>
+          <span class="stat-change up">+8</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon orange"><i class="fas fa-tree"></i></div>
+          <h3>12</h3>
+          <p>Trees Planted</p>
+          <span class="stat-change up">+3</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon purple"><i class="fas fa-star"></i></div>
+          <h3>1,280</h3>
+          <p>Impact Points</p>
+          <span class="stat-change up">+230</span>
+        </div>
+      </div>
+      <div class="dash-grid-2">
+        <div class="dash-card">
+          <div class="card-header"><h3>Impact Over Time</h3><a href="#">Export</a></div>
+          <div style="height:250px;display:flex;align-items:center;justify-content:center;background:var(--light);border-radius:12px;color:var(--gray);">
+            <div style="text-align:center;"><i class="fas fa-chart-area" style="font-size:3rem;color:var(--secondary);display:block;margin-bottom:10px;"></i> Impact Trend Chart</div>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="card-header"><h3>Category Breakdown</h3><a href="#">Details</a></div>
+          <div style="height:250px;display:flex;align-items:center;justify-content:center;background:var(--light);border-radius:12px;color:var(--gray);">
+            <div style="text-align:center;"><i class="fas fa-chart-pie" style="font-size:3rem;color:#2196F3;display:block;margin-bottom:10px;"></i> Category Chart</div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card">
+        <div class="card-header"><h3>Weekly Activity Log</h3></div>
+        <table class="dash-table">
+          <thead><tr><th>Date</th><th>Activity</th><th>Impact</th><th>Points Earned</th></tr></thead>
+          <tbody>
+            <tr><td>Jun 15, 2026</td><td>Home waste audit completed</td><td>12 kg diverted</td><td>+50</td></tr>
+            <tr><td>Jun 14, 2026</td><td>Planted a tree</td><td>1 tree</td><td>+100</td></tr>
+            <tr><td>Jun 13, 2026</td><td>Attended circular economy webinar</td><td>Educational</td><td>+30</td></tr>
+            <tr><td>Jun 12, 2026</td><td>Recycled electronics</td><td>5 kg e-waste</td><td>+40</td></tr>
+            <tr><td>Jun 11, 2026</td><td>Composted kitchen waste</td><td>3 kg composted</td><td>+20</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- My Projects -->
+    <section id="projects" style="display:none;">
+      <div class="dashboard-topbar">
+        <div class="page-title">
+          <h2>My Projects</h2>
+          <p>Manage and track your circular economy projects.</p>
+        </div>
+        <div class="topbar-right">
+          <button class="notification-btn"><i class="fas fa-bell"></i><span class="dot"></span></button>
+          <div class="admin-profile">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect fill='%2352b788' width='32' height='32' rx='16'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18'>J</text></svg>" alt="User">
+            <span>John Doe</span>
+          </div>
+        </div>
+      </div>
+      <div class="dash-stats">
+        <div class="dash-stat-card">
+          <div class="stat-icon green"><i class="fas fa-project-diagram"></i></div>
+          <h3>6</h3>
+          <p>Active Projects</p>
+          <span class="stat-change up">+2</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon blue"><i class="fas fa-check-circle"></i></div>
+          <h3>4</h3>
+          <p>Completed</p>
+          <span class="stat-change up">+1</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon orange"><i class="fas fa-clock"></i></div>
+          <h3>2</h3>
+          <p>Pending Review</p>
+          <span class="stat-change">-</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon purple"><i class="fas fa-trophy"></i></div>
+          <h3>4.7</h3>
+          <p>Avg Project Rating</p>
+          <span class="stat-change up">+0.3</span>
+        </div>
+      </div>
+      <div class="dash-card">
+        <div class="card-header"><h3>My Projects</h3><a href="#">Start New Project</a></div>
+        <table class="dash-table">
+          <thead><tr><th>Project Name</th><th>Type</th><th>Progress</th><th>Deadline</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Home Waste Audit</strong></td><td>Waste Management</td><td><div style="background:#e0e0e0;border-radius:10px;height:8px;width:120px;overflow:hidden;"><div style="width:100%;height:100%;background:var(--secondary);border-radius:10px;"></div></div></td><td>Completed</td><td><span class="status completed">Done</span></td></tr>
+            <tr><td><strong>Community Composting</strong></td><td>Composting</td><td><div style="background:#e0e0e0;border-radius:10px;height:8px;width:120px;overflow:hidden;"><div style="width:75%;height:100%;background:var(--secondary);border-radius:10px;"></div></div></td><td>Aug 10, 2026</td><td><span class="status active">Active</span></td></tr>
+            <tr><td><strong>Plastic-Free Challenge</strong></td><td>Awareness</td><td><div style="background:#e0e0e0;border-radius:10px;height:8px;width:120px;overflow:hidden;"><div style="width:60%;height:100%;background:#ffa726;border-radius:10px;"></div></div></td><td>Jul 30, 2026</td><td><span class="status active">Active</span></td></tr>
+            <tr><td><strong>Rainwater Harvesting</strong></td><td>Water Conservation</td><td><div style="background:#e0e0e0;border-radius:10px;height:8px;width:120px;overflow:hidden;"><div style="width:40%;height:100%;background:#2196F3;border-radius:10px;"></div></div></td><td>Sep 15, 2026</td><td><span class="status active">Active</span></td></tr>
+            <tr><td><strong>Solar Panel Installation</strong></td><td>Renewable Energy</td><td><div style="background:#e0e0e0;border-radius:10px;height:8px;width:120px;overflow:hidden;"><div style="width:20%;height:100%;background:#2196F3;border-radius:10px;"></div></div></td><td>Dec 1, 2026</td><td><span class="status pending">Planning</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" style="display:none;">
+      <div class="dashboard-topbar">
+        <div class="page-title">
+          <h2>Learning Resources</h2>
+          <p>Access guides, webinars, and educational materials.</p>
+        </div>
+        <div class="topbar-right">
+          <button class="notification-btn"><i class="fas fa-bell"></i><span class="dot"></span></button>
+          <div class="admin-profile">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect fill='%2352b788' width='32' height='32' rx='16'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18'>J</text></svg>" alt="User">
+            <span>John Doe</span>
+          </div>
+        </div>
+      </div>
+      <div class="dash-stats">
+        <div class="dash-stat-card">
+          <div class="stat-icon green"><i class="fas fa-book"></i></div>
+          <h3>24</h3>
+          <p>Guides Available</p>
+          <span class="stat-change up">+3</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon blue"><i class="fas fa-video"></i></div>
+          <h3>18</h3>
+          <p>Webinars</p>
+          <span class="stat-change up">+2</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon orange"><i class="fas fa-file-alt"></i></div>
+          <h3>12</h3>
+          <p>Case Studies</p>
+          <span class="stat-change">-</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon purple"><i class="fas fa-graduation-cap"></i></div>
+          <h3>6</h3>
+          <p>Courses</p>
+          <span class="stat-change up">+1</span>
+        </div>
+      </div>
+      <div class="dash-grid-3">
+        <div class="dash-card">
+          <div style="height:120px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:15px;">
+            <i class="fas fa-file-pdf" style="font-size:2.5rem;color:#ff4d4d;"></i>
+          </div>
+          <h4 style="font-size:1rem;color:var(--dark);margin-bottom:5px;">Circular Economy 101</h4>
+          <p style="font-size:0.8rem;color:var(--gray);margin-bottom:10px;">A comprehensive beginner's guide to circular economy principles and practices.</p>
+          <span style="font-size:0.75rem;color:var(--secondary);font-weight:600;"><i class="fas fa-download"></i> Free Download</span>
+        </div>
+        <div class="dash-card">
+          <div style="height:120px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:15px;">
+            <i class="fas fa-video" style="font-size:2.5rem;color:#2196F3;"></i>
+          </div>
+          <h4 style="font-size:1rem;color:var(--dark);margin-bottom:5px;">Waste to Value Webinar</h4>
+          <p style="font-size:0.8rem;color:var(--gray);margin-bottom:10px;">Learn how innovative companies turn waste streams into profitable products.</p>
+          <span style="font-size:0.75rem;color:var(--secondary);font-weight:600;"><i class="fas fa-play"></i> Watch Now</span>
+        </div>
+        <div class="dash-card">
+          <div style="height:120px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:15px;">
+            <i class="fas fa-book" style="font-size:2.5rem;color:#ffa726;"></i>
+          </div>
+          <h4 style="font-size:1rem;color:var(--dark);margin-bottom:5px;">Sustainable Living Guide</h4>
+          <p style="font-size:0.8rem;color:var(--gray);margin-bottom:10px;">Practical tips and strategies for reducing your environmental footprint at home.</p>
+          <span style="font-size:0.75rem;color:var(--secondary);font-weight:600;"><i class="fas fa-download"></i> Premium</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section id="profile" style="display:none;">
+      <div class="dashboard-topbar">
+        <div class="page-title">
+          <h2>My Profile</h2>
+          <p>Manage your personal information and account details.</p>
+        </div>
+        <div class="topbar-right">
+          <button class="notification-btn"><i class="fas fa-bell"></i><span class="dot"></span></button>
+          <div class="admin-profile">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect fill='%2352b788' width='32' height='32' rx='16'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18'>J</text></svg>" alt="User">
+            <span>John Doe</span>
+          </div>
+        </div>
+      </div>
+      <div class="dash-grid-2">
+        <div class="dash-card">
+          <div class="card-header"><h3>Personal Information</h3></div>
+          <div style="text-align:center;margin-bottom:25px;">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><rect fill='%2352b788' width='80' height='80' rx='40'/><text x='40' y='52' text-anchor='middle' fill='white' font-size='40'>J</text></svg>" alt="Avatar" style="width:80px;height:80px;border-radius:50%;margin-bottom:10px;">
+            <h3 style="font-size:1.2rem;color:var(--dark);">John Doe</h3>
+            <p style="font-size:0.85rem;color:var(--gray);">john.doe@gmail.com</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;gap:15px;">
+              <div style="flex:1;">
+                <label style="font-size:0.8rem;color:var(--gray);display:block;margin-bottom:4px;">First Name</label>
+                <input type="text" value="John" style="width:100%;padding:10px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:0.9rem;outline:none;box-sizing:border-box;">
+              </div>
+              <div style="flex:1;">
+                <label style="font-size:0.8rem;color:var(--gray);display:block;margin-bottom:4px;">Last Name</label>
+                <input type="text" value="Doe" style="width:100%;padding:10px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:0.9rem;outline:none;box-sizing:border-box;">
+              </div>
+            </div>
+            <div>
+              <label style="font-size:0.8rem;color:var(--gray);display:block;margin-bottom:4px;">Email</label>
+              <input type="email" value="john.doe@gmail.com" style="width:100%;padding:10px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:0.9rem;outline:none;box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.8rem;color:var(--gray);display:block;margin-bottom:4px;">Location</label>
+              <input type="text" value="Salem, Tamil Nadu" style="width:100%;padding:10px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:0.9rem;outline:none;box-sizing:border-box;">
+            </div>
+            <button style="padding:12px;background:var(--secondary);color:var(--white);border:none;border-radius:10px;font-weight:600;cursor:pointer;"><i class="fas fa-save"></i> Save Changes</button>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="card-header"><h3>Account Details</h3></div>
+          <div style="display:flex;flex-direction:column;gap:15px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #f0f2f5;">
+              <div><strong>Member Since</strong><br><span style="font-size:0.8rem;color:var(--gray);">January 12, 2026</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #f0f2f5;">
+              <div><strong>Account Type</strong><br><span style="font-size:0.8rem;color:var(--gray);">Premium Member</span></div>
+              <span style="background:var(--secondary);color:var(--white);padding:4px 12px;border-radius:20px;font-size:0.75rem;">Active</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #f0f2f5;">
+              <div><strong>Impact Points</strong><br><span style="font-size:0.8rem;color:var(--gray);">Total accumulated points</span></div>
+              <span style="font-weight:700;font-size:1.1rem;color:var(--secondary);">1,280</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;">
+              <div><strong>Badges Earned</strong><br><span style="font-size:0.8rem;color:var(--gray);">Recognition for achievements</span></div>
+              <span style="font-weight:700;color:var(--dark);">4 Badges</span>
+            </div>
+          </div>
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid #f0f2f5;">
+            <button style="padding:10px 20px;background:var(--light);border:1px solid #e0e0e0;border-radius:10px;cursor:pointer;margin-right:10px;"><i class="fas fa-key"></i> Change Password</button>
+            <button style="padding:10px 20px;background:rgba(255,77,77,0.1);border:1px solid rgba(255,77,77,0.2);border-radius:10px;cursor:pointer;color:#ff4d4d;"><i class="fas fa-trash"></i> Delete Account</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="settings" style="display:none;">
+      <div class="dashboard-topbar">
+        <div class="page-title">
+          <h2>Settings</h2>
+          <p>Customize your dashboard experience and preferences.</p>
+        </div>
+        <div class="topbar-right">
+          <button class="notification-btn"><i class="fas fa-bell"></i><span class="dot"></span></button>
+          <div class="admin-profile">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect fill='%2352b788' width='32' height='32' rx='16'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18'>J</text></svg>" alt="User">
+            <span>John Doe</span>
+          </div>
+        </div>
+      </div>
+      <div class="dash-grid-2">
+        <div class="dash-card">
+          <div class="card-header"><h3>Preferences</h3></div>
+          <div style="display:flex;flex-direction:column;gap:15px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f0f2f5;">
+              <div><strong>Email Notifications</strong><br><span style="font-size:0.8rem;color:var(--gray);">Receive weekly impact summaries</span></div>
+              <label style="position:relative;display:inline-block;width:44px;height:24px;"><input type="checkbox" checked style="opacity:0;width:0;height:0;"><span style="position:absolute;cursor:pointer;inset:0;background:var(--secondary);border-radius:24px;transition:0.3s;"></span></label>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f0f2f5;">
+              <div><strong>Push Notifications</strong><br><span style="font-size:0.8rem;color:var(--gray);">Get instant updates on activity</span></div>
+              <label style="position:relative;display:inline-block;width:44px;height:24px;"><input type="checkbox" style="opacity:0;width:0;height:0;"><span style="position:absolute;cursor:pointer;inset:0;background:#ccc;border-radius:24px;transition:0.3s;"></span></label>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f0f2f5;">
+              <div><strong>Dashboard Language</strong><br><span style="font-size:0.8rem;color:var(--gray);">English (Default)</span></div>
+              <button style="padding:6px 16px;background:var(--light);border:1px solid #e0e0e0;border-radius:8px;cursor:pointer;font-size:0.85rem;">Change</button>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;">
+              <div><strong>Dark Mode</strong><br><span style="font-size:0.8rem;color:var(--gray);">Toggle dark theme for dashboard</span></div>
+              <label style="position:relative;display:inline-block;width:44px;height:24px;"><input type="checkbox" style="opacity:0;width:0;height:0;"><span style="position:absolute;cursor:pointer;inset:0;background:#ccc;border-radius:24px;transition:0.3s;"></span></label>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="card-header"><h3>Privacy & Security</h3></div>
+          <div style="display:flex;flex-direction:column;gap:15px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f0f2f5;">
+              <div><strong>Profile Visibility</strong><br><span style="font-size:0.8rem;color:var(--gray);">Visible to all users</span></div>
+              <button style="padding:6px 16px;background:var(--light);border:1px solid #e0e0e0;border-radius:8px;cursor:pointer;font-size:0.85rem;">Edit</button>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f0f2f5;">
+              <div><strong>Two-Factor Auth</strong><br><span style="font-size:0.8rem;color:var(--gray);">Enhance account security</span></div>
+              <label style="position:relative;display:inline-block;width:44px;height:24px;"><input type="checkbox" style="opacity:0;width:0;height:0;"><span style="position:absolute;cursor:pointer;inset:0;background:#ccc;border-radius:24px;transition:0.3s;"></span></label>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;">
+              <div><strong>Change Password</strong><br><span style="font-size:0.8rem;color:var(--gray);">Last changed 45 days ago</span></div>
+              <button style="padding:6px 16px;background:var(--secondary);color:var(--white);border:none;border-radius:8px;cursor:pointer;font-size:0.85rem;">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support -->
+    <section id="support" style="display:none;">
+      <div class="dashboard-topbar">
+        <div class="page-title">
+          <h2>Help & Support</h2>
+          <p>Find answers, contact support, or browse the help center.</p>
+        </div>
+        <div class="topbar-right">
+          <button class="notification-btn"><i class="fas fa-bell"></i><span class="dot"></span></button>
+          <div class="admin-profile">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect fill='%2352b788' width='32' height='32' rx='16'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='18'>J</text></svg>" alt="User">
+            <span>John Doe</span>
+          </div>
+        </div>
+      </div>
+      <div class="dash-stats">
+        <div class="dash-stat-card">
+          <div class="stat-icon green"><i class="fas fa-question-circle"></i></div>
+          <h3>48</h3>
+          <p>Help Articles</p>
+          <span class="stat-change up">+5</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon blue"><i class="fas fa-ticket-alt"></i></div>
+          <h3>2</h3>
+          <p>My Tickets</p>
+          <span class="stat-change">-</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon orange"><i class="fas fa-clock"></i></div>
+          <h3>4.2h</h3>
+          <p>Avg Response</p>
+          <span class="stat-change down">-0.3h</span>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon purple"><i class="fas fa-smile"></i></div>
+          <h3>96%</h3>
+          <p>Satisfaction</p>
+          <span class="stat-change up">+1%</span>
+        </div>
+      </div>
+      <div class="dash-grid-2">
+        <div class="dash-card">
+          <div class="card-header"><h3>Contact Support</h3></div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div>
+              <label style="font-size:0.85rem;font-weight:500;color:var(--dark);display:block;margin-bottom:5px;">Subject</label>
+              <input type="text" placeholder="Brief description of your issue" style="width:100%;padding:10px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:0.9rem;outline:none;box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.85rem;font-weight:500;color:var(--dark);display:block;margin-bottom:5px;">Category</label>
+              <select style="width:100%;padding:10px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:0.9rem;outline:none;">
+                <option>Technical Issue</option>
+                <option>Account Related</option>
+                <option>Billing Question</option>
+                <option>Feature Request</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:0.85rem;font-weight:500;color:var(--dark);display:block;margin-bottom:5px;">Message</label>
+              <textarea rows="4" placeholder="Describe your issue in detail..." style="width:100%;padding:10px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:0.9rem;outline:none;resize:vertical;box-sizing:border-box;font-family:inherit;"></textarea>
+            </div>
+            <button style="padding:12px;background:var(--secondary);color:var(--white);border:none;border-radius:10px;font-weight:600;cursor:pointer;"><i class="fas fa-paper-plane"></i> Submit Ticket</button>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="card-header"><h3>FAQ & Quick Links</h3></div>
+          <ul class="activity-list">
+            <li><div class="activity-icon green"><i class="fas fa-question"></i></div><div class="activity-text"><p>How do I log my environmental impact?</p><span>Guide &rsaquo;</span></div></li>
+            <li><div class="activity-icon blue"><i class="fas fa-question"></i></div><div class="activity-text"><p>How to invite team members to a project?</p><span>Guide &rsaquo;</span></div></li>
+            <li><div class="activity-icon orange"><i class="fas fa-question"></i></div><div class="activity-text"><p>Understanding impact points and badges</p><span>Guide &rsaquo;</span></div></li>
+            <li><div class="activity-icon green"><i class="fas fa-question"></i></div><div class="activity-text"><p>How to export my impact report?</p><span>Guide &rsaquo;</span></div></li>
+            <li><div class="activity-icon blue"><i class="fas fa-envelope"></i></div><div class="activity-text"><p>Email: support@circularfuture.com</p><span>We reply within 24 hours</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

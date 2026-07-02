@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Sign Up - Circular Economy Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body>
+
+<header><div class="header-inner">
+  <div class="logo" onclick="window.location.href='index.html'">
+    
+    <span class="logo-text"><img src="assets/logo_white.webp" alt="">
+  </div>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</div></header>
+
+<div class="mobile-menu">
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+  <a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a>
+  <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  <a href="login.html" class="btn-nav btn-login">Login</a>
+</div>
+
+<div class="auth-page">
+  <div class="auth-particles">
+    <div class="p"></div><div class="p"></div><div class="p"></div>
+  </div>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-icon"><i class="fas fa-user-plus"></i></div>
+        <h1>Create Account</h1>
+        <p>Join CircularFuture today</p>
+      </div>
+
+      <form class="auth-form" id="signupForm">
+        <!-- Name -->
+        <div class="form-group">
+          <label>Full Name</label>
+          <div class="input-wrapper">
+            <i class="fas fa-user"></i>
+            <input type="text" id="signupName" placeholder="John Doe" required>
+          </div>
+          <div class="alert-message" id="nameAlert"></div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label>Email Address</label>
+          <div class="input-wrapper">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="signupEmail" placeholder="you@gmail.com" required>
+          </div>
+          <div class="alert-message" id="signupEmailAlert"></div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label>Password</label>
+          <div class="password-wrapper">
+            <div class="input-wrapper">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="signupPassword" class="password-input" placeholder="Create a strong password" required>
+              <button type="button" class="toggle-password" aria-label="Toggle password visibility"></button>
+            </div>
+          </div>
+          <div class="password-strength">
+            <div class="strength-bar" id="signupStrengthBar"></div>
+            <span class="strength-text"></span>
+          </div>
+          <div class="alert-message" id="signupPassAlert"></div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <div class="password-wrapper">
+            <div class="input-wrapper">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="signupConfirm" class="password-input" placeholder="Confirm your password" required>
+              <button type="button" class="toggle-password" aria-label="Toggle password visibility"></button>
+            </div>
+          </div>
+          <div class="password-strength">
+            <div class="strength-bar" id="confirmStrengthBar"></div>
+            <span class="strength-text"></span>
+          </div>
+          <div class="alert-message" id="confirmAlert"></div>
+        </div>
+
+        <!-- Privacy -->
+        <div class="privacy-check">
+          <div class="checkbox-group">
+            <input type="checkbox" id="privacyCheck">
+            <label for="privacyCheck">I accept the <a href="404.html">Privacy Policy</a> and <a href="404.html">Terms & Conditions</a></label>
+          </div>
+          <div class="alert-message" id="privacyAlert"></div>
+        </div>
+
+        <button type="submit" class="btn-auth">Sign Up</button>
+      </form>
+
+      <div class="auth-divider"><span>OR</span></div>
+
+      <div class="auth-footer-text">
+        Already have an account? <a href="login.html">Sign in</a>
+      </div>
+
+      <div style="text-align:center;margin-top:15px;">
+        <a href="index.html" class="go-back-home"><i class="fas fa-arrow-left"></i> Go Back Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

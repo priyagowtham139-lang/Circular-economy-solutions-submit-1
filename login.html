@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Login - Circular Economy Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻</text></svg>">
+</head>
+<body>
+
+<header><div class="header-inner">
+  <div class="logo" onclick="window.location.href='index.html'">
+    
+    <span class="logo-text"><img src="assets/logo_white.webp" alt="">
+  </div>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</div></header>
+
+<div class="mobile-menu">
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+  <a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a>
+  <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  <a href="signup.html" class="btn-nav btn-signup">Sign Up</a>
+</div>
+
+<div class="auth-page">
+  <div class="auth-particles">
+    <div class="p"></div><div class="p"></div><div class="p"></div>
+  </div>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-icon"><i class="fas fa-leaf"></i></div>
+        <h1>Welcome Back</h1>
+        <p>Login to your CircularFuture account</p>
+      </div>
+
+      <form class="auth-form" id="loginForm">
+        <!-- Role Selector -->
+        <div class="form-group">
+          <label>Select Role</label>
+          <div class="role-selector">
+            <div class="role-option active" data-value="user">
+              <i class="fas fa-user"></i>
+              <span>User</span>
+              <input type="radio" name="role" value="user" checked hidden>
+            </div>
+            <div class="role-option" data-value="admin">
+              <i class="fas fa-shield-alt"></i>
+              <span>Admin</span>
+              <input type="radio" name="role" value="admin" hidden>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label>Email Address</label>
+          <div class="input-wrapper">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="loginEmail" placeholder="you@gmail.com" required>
+          </div>
+          <div class="alert-message" id="emailAlert"></div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label>Password</label>
+          <div class="password-wrapper">
+            <div class="input-wrapper">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="loginPassword" class="password-input" placeholder="Enter your password" required>
+              <button type="button" class="toggle-password" aria-label="Toggle password visibility"></button>
+            </div>
+          </div>
+          <div class="password-strength">
+            <div class="strength-bar" id="loginStrengthBar"></div>
+            <span class="strength-text"></span>
+          </div>
+          <div class="alert-message" id="passwordAlert"></div>
+        </div>
+
+        <!-- Remember & Forgot -->
+        <div class="form-options">
+          <div class="checkbox-group">
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">Remember me</label>
+          </div>
+          <a href="#" class="forgot-link">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn-auth">Login</button>
+      </form>
+
+      <div class="auth-divider"><span>OR</span></div>
+
+      <div class="auth-footer-text">
+        Don't have an account? <a href="signup.html">Create one</a>
+      </div>
+
+      <div style="text-align:center;margin-top:15px;">
+        <a href="index.html" class="go-back-home"><i class="fas fa-arrow-left"></i> Go Back Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻</text></svg>">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a1929, #1b4332, #0a0a1a);
+      background-size: 400% 400%;
+      animation: bgMove 15s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    @keyframes bgMove { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    .container { text-align: center; padding: 20px; max-width: 600px; position: relative; }
+    .error-number {
+      font-size: 12rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #52b788, #2d6a4f, #52b788);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      animation: float 3s ease-in-out infinite;
+      position: relative;
+    }
+    .error-number::after {
+      content: '♻';
+      position: absolute;
+      top: -20px; right: -40px;
+      font-size: 3rem;
+      -webkit-text-fill-color: initial;
+      color: rgba(82,183,136,0.2);
+      animation: spin 8s linear infinite;
+    }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    h1 { color: var(--white); font-size: 2rem; margin-bottom: 15px; }
+    p { color: rgba(255,255,255,0.6); font-size: 1.05rem; margin-bottom: 30px; line-height: 1.7; }
+    .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 14px 35px; border-radius: 50px; font-size: 1rem; font-weight: 600;
+      text-decoration: none; transition: all 0.3s ease; display: inline-flex;
+      align-items: center; gap: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #52b788, #2d6a4f);
+      color: white; box-shadow: 0 10px 30px rgba(82,183,136,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(82,183,136,0.4); }
+    .btn-secondary {
+      background: transparent; color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-secondary:hover { border-color: #52b788; background: rgba(82,183,136,0.1); transform: translateY(-3px); }
+    .icon-404 { font-size: 2rem; color: rgba(255,255,255,0.1); position: absolute; }
+    .icon-404:nth-child(1) { top: 10%; left: 5%; }
+    .icon-404:nth-child(2) { bottom: 15%; right: 8%; }
+    .icon-404:nth-child(3) { top: 40%; right: 3%; }
+    .icon-404:nth-child(4) { bottom: 30%; left: 3%; }
+    @media(max-width:480px) {
+      .error-number { font-size: 7rem; }
+      h1 { font-size: 1.4rem; }
+      .btn-group { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <i class="fas fa-recycle icon-404"></i>
+  <i class="fas fa-leaf icon-404"></i>
+  <i class="fas fa-globe icon-404"></i>
+  <i class="fas fa-tree icon-404"></i>
+
+  <div class="container">
+    <div class="error-number">404</div>
+    <h1><i class="fas fa-map-signs" style="color:var(--secondary);"></i> Oops! Page Not Found</h1>
+    <p>The page you're looking for doesn't exist or has been moved.<br>Let's get you back on track toward a circular future.</p>
+    <div class="btn-group">
+      <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Go Home</a>
+      <a href="javascript:history.back()" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Go Back</a>
+    </div>
+  </div>
+</body>
+</html>

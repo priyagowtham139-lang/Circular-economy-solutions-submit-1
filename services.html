@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Services - Circular Economy Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .pricing-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:30px; }
+    .pricing-card { background:var(--white);border-radius:20px;padding:40px 30px;text-align:center;box-shadow:var(--shadow);transition:var(--transition);position:relative;overflow:hidden; }
+    .pricing-card:hover { transform:translateY(-15px);box-shadow:0 20px 50px rgba(0,0,0,0.15); }
+    .pricing-card.featured { border:2px solid var(--secondary);transform:scale(1.05); }
+    .pricing-card.featured:hover { transform:scale(1.05) translateY(-15px); }
+    .pricing-card .badge { position:absolute;top:15px;right:-30px;background:var(--gradient);color:var(--white);padding:5px 40px;font-size:0.75rem;font-weight:600;transform:rotate(45deg); }
+    .pricing-card .price { font-size:3rem;font-weight:800;color:var(--dark);margin:20px 0; }
+    .pricing-card .price span { font-size:1rem;color:var(--gray);font-weight:400; }
+    .pricing-card ul { text-align:left;margin:20px 0; }
+    .pricing-card ul li { padding:8px 0;color:var(--gray);font-size:0.9rem;display:flex;align-items:center;gap:10px; }
+    .pricing-card ul li i { color:var(--secondary); }
+    .pricing-card .btn-plan { display:inline-block;padding:12px 35px;border-radius:25px;background:var(--gradient);color:var(--white);font-weight:600;transition:var(--transition);border:none;cursor:pointer; }
+    .pricing-card .btn-plan:hover { transform:translateY(-3px);box-shadow:0 8px 25px rgba(82,183,136,0.3); }
+    .methodology-steps { display:grid;grid-template-columns:repeat(3,1fr);gap:25px; }
+    .methodology-step { background:var(--white);border-radius:20px;padding:30px;box-shadow:var(--shadow);transition:var(--transition);text-align:center; }
+    .methodology-step:hover { transform:translateY(-10px); }
+    .methodology-step .num { width:50px;height:50px;border-radius:50%;background:var(--gradient);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-size:1.2rem;font-weight:700; }
+    .methodology-step h3 { font-size:1.1rem;color:var(--dark);margin-bottom:10px; }
+    .methodology-step p { color:var(--gray);font-size:0.9rem; }
+    .case-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:25px; }
+    .case-card { border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);background:var(--white); }
+    .case-card:hover { transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,0.12); }
+    .case-card img { width:100%;height:200px;object-fit:cover; }
+    .case-card .case-content { padding:20px; }
+    .case-card .case-content h4 { font-size:1rem;color:var(--dark);margin-bottom:8px; }
+    .case-card .case-content p { color:var(--gray);font-size:0.85rem; }
+    .case-card .case-content .result { display:inline-block;margin-top:10px;padding:4px 12px;border-radius:20px;background:rgba(82,183,136,0.12);color:var(--primary);font-size:0.8rem;font-weight:600; }
+    @media(max-width:768px){ .pricing-grid { grid-template-columns:1fr; } .pricing-card.featured { transform:none; } .pricing-card.featured:hover { transform:translateY(-15px); } .methodology-steps { grid-template-columns:1fr; } .case-grid { grid-template-columns:1fr; } }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻</text></svg>">
+</head>
+<body class="services-page">
+
+<header><div class="header-inner">
+  <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    
+    <span class="logo-text"><img src="assets/logo_white.webp" alt="">
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="nav-btn-group">
+    <a href="login.html" class="btn-nav btn-login">Login</a>
+    <a href="signup.html" class="btn-nav btn-signup">Sign Up</a>
+  </div>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</div></header>
+
+<div class="mobile-menu">
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+  <a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a>
+  <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  <a href="login.html" class="btn-nav btn-login">Login</a>
+  <a href="signup.html" class="btn-nav btn-signup">Sign Up</a>
+</div>
+
+<!-- SECTION 1: HERO -->
+<section class="page-hero" style="min-height:100vh;width:100%;">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/servicces.mp4" type="video/mp4">
+  </video>
+  <div class="page-hero-content">
+    <h1>Our Services</h1>
+    <p>End-to-end circular economy solutions tailored to your needs.</p>
+    <div class="breadcrumb"><a href="index.html" style="color:#fff;font-weight:700;">Home</a> / <span style="color:#fff;font-weight:700;">Services</span></div>
+  </div>
+</section>
+
+<!-- SECTION 2: SERVICE CATEGORIES -->
+<section class="section-padding">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>What We Offer</h2><p>Comprehensive solutions for every stage of your circular journey.</p></div>
+    <div class="services-grid">
+      <div class="service-card animate-on-scroll">
+        <img src="assets/sustainable_design.webp" alt="">
+        <h3>Sustainable Design</h3>
+        <p>Eco-friendly product design, lifecycle assessment, and circular material selection to minimize environmental impact from conception.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <img src="assets/Reduce waste.webp" alt="">
+        <h3>Waste Management</h3>
+        <p>Comprehensive waste sorting, recycling infrastructure, and recovery systems customized for your industry and scale.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+       <img src="assets/circular_analytics.webp" alt="">
+        <h3>Circular Analytics</h3>
+        <p>Advanced data analytics to measure circularity, track KPIs, and identify optimization opportunities across operations.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <img src="assets/consulting.webp" alt="">
+        <h3>Strategic Consulting</h3>
+        <p>Expert guidance on circular economy strategy, regulatory compliance, sustainability reporting, and stakeholder engagement.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <img src="assets/supply_chain.webp" alt="">
+        <h3>Supply Chain Optimization</h3>
+        <p>Circular supply chain redesign to minimize waste, reduce carbon footprint, and enhance resource efficiency across your value chain.</p>
+      </div>
+      <div class="service-card animate-on-scroll">
+        <img src="assets/Training_Programs.webp" alt="">
+        <h3>Training & Workshops</h3>
+        <p>Capacity-building programs, workshops, and certifications to empower your team with circular economy knowledge and practical skills.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: METHODOLOGY -->
+<section class="section-padding" style="background:var(--light);">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>Our Methodology</h2><p>A proven approach to delivering circular results.</p></div>
+    <div class="methodology-steps">
+      <div class="methodology-step animate-on-scroll"><div class="num">1</div><h3>Discovery & Assessment</h3><p>In-depth analysis of your current operations, material flows, waste streams, and circularity potential.</p></div>
+      <div class="methodology-step animate-on-scroll"><div class="num">2</div><h3>Strategy Development</h3><p>Co-creating a tailored circular economy roadmap aligned with your business goals and sustainability targets.</p></div>
+      <div class="methodology-step animate-on-scroll"><div class="num">3</div><h3>Implementation</h3><p>Executing the strategy with dedicated project management, technology integration, and change management.</p></div>
+      <div class="methodology-step animate-on-scroll"><div class="num">4</div><h3>Monitoring & Reporting</h3><p>Continuous tracking of circular metrics, environmental impact, and ROI with transparent reporting.</p></div>
+      <div class="methodology-step animate-on-scroll"><div class="num">5</div><h3>Optimization & Scaling</h3><p>Data-driven refinements and scaling strategies to maximize circular impact and business value over time.</p></div>
+      <div class="methodology-step animate-on-scroll"><div class="num">6</div><h3>Knowledge Transfer</h3><p>Building internal capabilities through training, documentation, and tools for long-term self-sufficiency.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: PRICING -->
+<section class="section-padding">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>Choose Your Plan</h2><p>Flexible pricing to match your organization's needs and scale.</p></div>
+    <div class="pricing-grid">
+      <div class="pricing-card animate-on-scroll">
+        <h3 style="font-size:1.3rem;color:var(--dark);">Starter</h3>
+        <div class="price">$2,499<span>/month</span></div>
+        <ul><li><i class="fas fa-check"></i> Initial Circularity Assessment</li><li><i class="fas fa-check"></i> Basic Waste Audit</li><li><i class="fas fa-check"></i> Monthly Report</li><li><i class="fas fa-check"></i> Email Support</li><li><i class="fas fa-check"></i> 1 Training Session</li></ul>
+        <button class="btn-plan">Get Started</button>
+      </div>
+      <div class="pricing-card featured animate-on-scroll">
+        <div class="badge">Popular</div>
+        <h3 style="font-size:1.3rem;color:var(--dark);">Professional</h3>
+        <div class="price">$4,999<span>/month</span></div>
+        <ul><li><i class="fas fa-check"></i> Comprehensive Circular Audit</li><li><i class="fas fa-check"></i> Full Supply Chain Analysis</li><li><i class="fas fa-check"></i> Weekly Reports & Dashboard</li><li><i class="fas fa-check"></i> Dedicated Account Manager</li><li><i class="fas fa-check"></i> 4 Training Sessions</li><li><i class="fas fa-check"></i> Priority Support</li></ul>
+        <button class="btn-plan">Get Started</button>
+      </div>
+      <div class="pricing-card animate-on-scroll">
+        <h3 style="font-size:1.3rem;color:var(--dark);">Enterprise</h3>
+        <div class="price">$9,999<span>/month</span></div>
+        <ul><li><i class="fas fa-check"></i> End-to-End Circular Transformation</li><li><i class="fas fa-check"></i> Custom Solution Development</li><li><i class="fas fa-check"></i> Real-Time Analytics Platform</li><li><i class="fas fa-check"></i> Dedicated Project Team</li><li><i class="fas fa-check"></i> Unlimited Training</li><li><i class="fas fa-check"></i> 24/7 Premium Support</li></ul>
+        <button class="btn-plan">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: CASE STUDIES -->
+<section class="section-padding" style="background:var(--light);">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>Success Stories</h2><p>Real results from our circular economy implementations.</p></div>
+    <div class="case-grid">
+      <div class="case-card animate-on-scroll">
+       <img src="assets/Echo_park.webp" alt="">
+        <div class="case-content"><h4>EcoPack Industries</h4><p>Reduced manufacturing waste by 60% through circular redesign and closed-loop material systems.</p><span class="result">60% Waste Reduction</span></div>
+      </div>
+      <div class="case-card animate-on-scroll">
+    <img src="assets/Green_logistics.webp" alt="">
+        <div class="case-content"><h4>GreenLogistics Ltd</h4><p>Optimized supply chain operations resulting in 45% lower carbon emissions and $2M annual savings.</p><span class="result">45% Lower Emissions</span></div>
+      </div>
+      <div class="case-card animate-on-scroll">
+        <img src="assets/City_zero.webp" alt="">
+        <div class="case-content"><h4>CityZero Initiative</h4><p>Implemented city-wide circular waste management system serving 500K residents with 80% recycling rate.</p><span class="result">80% Recycling Rate</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: WHY CHOOSE US -->
+<section class="section-padding">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>Why Choose CircularFuture?</h2></div>
+    <div class="features-grid">
+      <div class="feature-card animate-on-scroll"><h3><i class="fas fa-certificate"></i> Proven Track Record</h3><p>200+ successful projects across 25+ countries with measurable environmental and economic impact.</p></div>
+      <div class="feature-card animate-on-scroll"><h3><i class="fas fa-users"></i> Expert Team</h3><p>50+ circular economy specialists with decades of combined experience across industries and sectors.</p></div>
+      <div class="feature-card animate-on-scroll"><h3><i class="fas fa-cogs"></i> Custom Solutions</h3><p>Every engagement is tailored to your unique context, challenges, and aspirations.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C360,60 720,0 1440,30 L1440,60 L0,60 Z" fill="#1b4332"/></svg></div>
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo"><img src="assets/logo_white.webp" alt="CircularFuture Logo" style="height:40px;width:auto;"></div>
+      <p>We are dedicated to advancing the circular economy through innovative solutions, expert consulting, and community-driven initiatives.</p>
+      <div class="footer-social"><a href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="404.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a></div>
+    </div>
+    <div class="footer-col"><button class="footer-toggle">Quick Links <i class="fas fa-chevron-down"></i></button><div class="footer-toggle-content"><h3>Quick Links</h3><ul><li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li><li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li><li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li></ul></div></div>
+    <div class="footer-col"><button class="footer-toggle">Services <i class="fas fa-chevron-down"></i></button><div class="footer-toggle-content"><h3>Services</h3><ul><li><a href="services.html"><i class="fas fa-chevron-right"></i> Sustainable Design</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Waste Management</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Circular Analytics</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Consulting</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Training Programs</a></li></ul></div></div>
+    <div class="footer-col"><button class="footer-toggle">Contact <i class="fas fa-chevron-down"></i></button><div class="footer-toggle-content"><h3>Contact Info</h3><ul class="footer-contact"><li><i class="fas fa-map-marker-alt"></i> Chinna tirupati Salem 636044</li><li><i class="fas fa-phone"></i> 0427-236897</li><li><i class="fas fa-envelope"></i> info@circularfuture.com</li><li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li></ul></div></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><p>&copy; 2026 CircularFuture. All rights reserved. | Empowering a Sustainable Tomorrow</p></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

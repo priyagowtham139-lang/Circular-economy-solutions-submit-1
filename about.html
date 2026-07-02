@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>About Us - Circular Economy Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .about-page .page-hero { background: linear-gradient(135deg, #006d77, #83c5be); }
+    .team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap:25px; }
+    .team-card { background:var(--white);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);text-align:center; }
+    .team-card:hover { transform:translateY(-15px);box-shadow:0 20px 50px rgba(0,0,0,0.15); }
+    .team-card img { width:100%;height:260px;object-fit:cover; }
+    .team-card .team-info { padding:20px; }
+    .team-card .team-info h4 { font-size:1.1rem;color:var(--dark);margin-bottom:5px; }
+    .team-card .team-info span { color:var(--gray);font-size:0.85rem; }
+    .team-card .team-info p { color:var(--gray);font-size:0.85rem;margin-top:10px;line-height:1.5; }
+    .timeline { position:relative;padding-left:40px; }
+    .timeline::before { content:'';position:absolute;left:15px;top:0;bottom:0;width:3px;background:var(--gradient);border-radius:3px; }
+    .timeline-item { position:relative;margin-bottom:30px;padding-left:30px; }
+    .timeline-item::before { content:'';position:absolute;left:-29px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--secondary);border:3px solid var(--white);box-shadow:0 0 0 3px var(--secondary); }
+    .timeline-item .year { font-size:0.9rem;font-weight:700;color:var(--primary);margin-bottom:5px; }
+    .timeline-item h4 { font-size:1.1rem;color:var(--dark); }
+    .timeline-item p { color:var(--gray);font-size:0.9rem; }
+    .values-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:30px; }
+    .value-card { text-align:center;padding:35px 25px;border-radius:20px;background:var(--white);box-shadow:var(--shadow);transition:var(--transition); }
+    .value-card:hover { transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,0.12); }
+    .value-card img { width:100%;height:200px;object-fit:cover;border-radius:16px;margin-bottom:20px;display:block; }
+    .value-card .val-icon { width:70px;height:70px;border-radius:20px;background:var(--light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem;color:var(--primary); }
+    .value-card h3 { font-size:1.2rem;color:var(--dark);margin-bottom:10px; }
+    .value-card p { color:var(--gray);font-size:0.9rem; }
+    @media(max-width:768px){ .team-grid { grid-template-columns:repeat(2,1fr); } .values-grid { grid-template-columns:1fr; } }
+    @media(max-width:480px){ .team-grid { grid-template-columns:1fr; } }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻</text></svg>">
+</head>
+<body class="about-page">
+
+<header><div class="header-inner">
+  <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    
+    <img src="assets/logo_white.webp" alt="">
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="nav-btn-group">
+    <a href="login.html" class="btn-nav btn-login">Login</a>
+    <a href="signup.html" class="btn-nav btn-signup">Sign Up</a>
+  </div>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</div></header>
+
+<div class="mobile-menu">
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+  <a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a>
+  <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  <a href="login.html" class="btn-nav btn-login">Login</a>
+  <a href="signup.html" class="btn-nav btn-signup">Sign Up</a>
+</div>
+
+<!-- SECTION 1: HERO -->
+<section class="page-hero" style="min-height:100vh;width:100%;background:#006d77;overflow:hidden;">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/rriver.mp4" type="video/mp4">
+  </video>
+  <div class="page-hero-content">
+    <h1>About Us</h1>
+    <p>Discover our mission, our team, and our journey toward a circular future.</p>
+    <div class="breadcrumb"><a href="index.html" style="color:#ffffff;font-weight:700;">Home</a> / <span style="color:#ffffff;font-weight:700;">About</span></div>
+  </div>
+</section>
+  
+<!-- SECTION 2: OUR STORY -->
+<section class="section-padding">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>Our Story</h2><p>How we started and where we're headed.</p></div>
+    <div class="about-grid">
+      <div class="about-text animate-on-scroll-left">
+        <h3>A <span>Journey</span> Toward Sustainability</h3>
+        <p>Founded in 2018, CircularFuture began with a simple yet powerful idea: what if waste wasn't waste at all, but a valuable resource waiting to be reimagined?</p>
+        <p>What started as a small research initiative has grown into a global movement — partnering with businesses, governments, and communities to redesign the way we produce, consume, and regenerate.</p>
+        <p>Today, we are at the forefront of the circular economy revolution, delivering measurable impact across 25+ countries and transforming industries from packaging to construction.</p>
+      </div>
+      <div class="about-image animate-on-scroll-right">
+       <img src="assets/Journey.webp" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: MISSION & VISION -->
+<section class="section-padding" style="background:var(--light);">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>Mission & Vision</h2></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
+      <div class="animate-on-scroll-left" style="background:var(--white);padding:40px;border-radius:20px;box-shadow:var(--shadow);text-align:center;">
+        <i class="fas fa-bullseye" style="font-size:2.5rem;color:var(--primary);margin-bottom:20px;display:block;"></i>
+        <h3 style="font-size:1.4rem;color:var(--dark);margin-bottom:15px;">Our Mission</h3>
+        <p style="color:var(--gray);line-height:1.8;">To accelerate the global transition to a circular economy by providing innovative solutions, expert guidance, and collaborative platforms that empower organizations to eliminate waste, maximize resource efficiency, and create regenerative systems.</p>
+      </div>
+      <div class="animate-on-scroll-right" style="background:var(--white);padding:40px;border-radius:20px;box-shadow:var(--shadow);text-align:center;">
+        <i class="fas fa-eye" style="font-size:2.5rem;color:var(--primary);margin-bottom:20px;display:block;"></i>
+        <h3 style="font-size:1.4rem;color:var(--dark);margin-bottom:15px;">Our Vision</h3>
+        <p style="color:var(--gray);line-height:1.8;">A world where waste is eliminated, resources are continuously cycled, and economic growth is harmonized with environmental regeneration — creating prosperity for all within planetary boundaries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: OUR TEAM -->
+<section class="section-padding">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>Meet Our Team</h2><p>Passionate experts driving the circular revolution.</p></div>
+    <div class="team-grid">
+      <div class="team-card animate-on-scroll">
+        <img src="assets/Bhagya vittalapura.webp" alt="">
+        <div class="team-info"><h4>Dr. Jane Mitchell</h4><span>Founder & CEO</span><p>20+ years in sustainability and circular economy research.</p></div>
+      </div>
+      <div class="team-card animate-on-scroll">
+        <img src="assets/Rio_Prakash.webp" alt="">
+        <div class="team-info"><h4>Raj Kapoor</h4><span>CTO</span><p>Expert in circular technology and sustainable innovation.</p></div>
+      </div>
+      <div class="team-card animate-on-scroll">
+       <img src="assets/Jamesss.webp" alt="">
+        <div class="team-info"><h4>Ajil Larsson</h4><span>Head of Consulting</span><p>Specialist in circular supply chain transformation.</p></div>
+      </div>
+      <div class="team-card animate-on-scroll">
+        <img src="assets/Bhavya_bhuvanadasan.webp" alt="">
+        <div class="team-info"><h4>Marcus Chen</h4><span>Director of Operations</span><p>Driving global partnerships and project delivery.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: TIMELINE -->
+<section class="section-padding" style="background:var(--light);">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>Our Milestones</h2><p>Key moments in our journey toward a circular future.</p></div>
+    <div class="timeline" style="max-width:700px;margin:0 auto;">
+      <div class="timeline-item animate-on-scroll-left"><div class="year">2018</div><h4>Founded CircularFuture</h4><p>Launched as a research initiative focused on circular economy solutions.</p></div>
+      <div class="timeline-item animate-on-scroll-left"><div class="year">2019</div><h4>First Major Project</h4><p>Partnered with EcoPack to reduce manufacturing waste by 40%.</p></div>
+      <div class="timeline-item animate-on-scroll-left"><div class="year">2021</div><h4>Global Expansion</h4><p>Expanded operations to 12 countries across Europe and Asia.</p></div>
+      <div class="timeline-item animate-on-scroll-left"><div class="year">2023</div><h4>10,000 Tons Milestone</h4><p>Achieved 10,000 tons of waste diverted from landfills.</p></div>
+      <div class="timeline-item animate-on-scroll-left"><div class="year">2025</div><h4>Innovation Lab Launch</h4><p>Opened our Circular Innovation Lab for R&D and prototyping.</p></div>
+      <div class="timeline-item animate-on-scroll-left"><div class="year">2026</div><h4>25 Countries Impacted</h4><p>Growing global presence with projects in 25+ countries.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: VALUES -->
+<section class="section-padding">
+  <div class="container">
+    <div class="section-header animate-on-scroll"><h2>Our Core Values</h2><p>The principles that guide everything we do.</p></div>
+    <div class="values-grid">
+      <div class="value-card animate-on-scroll">
+        <img src="assets/Sustainable (1).webp" alt="">
+        <h3>Sustainability First</h3>
+        <p>Environmental responsibility is at the heart of every decision we make.</p>
+      </div>
+      <div class="value-card animate-on-scroll">
+       <img src="assets/innovationnn.webp" alt="">
+        <h3>Innovation</h3>
+        <p>We constantly push boundaries to find creative circular solutions.</p>
+      </div>
+      <div class="value-card animate-on-scroll">
+        <img src="assets/integrity.webp" alt="">
+        <h3>Integrity</h3>
+        <p>Transparency, honesty, and ethical practices in all our engagements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C360,60 720,0 1440,30 L1440,60 L0,60 Z" fill="#1b4332"/></svg></div>
+  <div class="footer-top"><div class="container"><div class="footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo"><img src="assets/logo_white.webp" alt="CircularFuture Logo" style="height:40px;width:auto;"></div>
+      <p>We are dedicated to advancing the circular economy through innovative solutions, expert consulting, and community-driven initiatives.</p>
+      <div class="footer-social"><a href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="404.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a></div>
+    </div>
+    <div class="footer-col"><button class="footer-toggle">Quick Links <i class="fas fa-chevron-down"></i></button><div class="footer-toggle-content"><h3>Quick Links</h3><ul><li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li><li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li><li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li></ul></div></div>
+    <div class="footer-col"><button class="footer-toggle">Services <i class="fas fa-chevron-down"></i></button><div class="footer-toggle-content"><h3>Services</h3><ul><li><a href="services.html"><i class="fas fa-chevron-right"></i> Sustainable Design</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Waste Management</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Circular Analytics</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Consulting</a></li><li><a href="services.html"><i class="fas fa-chevron-right"></i> Training Programs</a></li></ul></div></div>
+    <div class="footer-col"><button class="footer-toggle">Contact <i class="fas fa-chevron-down"></i></button><div class="footer-toggle-content"><h3>Contact Info</h3><ul class="footer-contact"><li><i class="fas fa-map-marker-alt"></i> Chinna tirupati Salem 636044</li><li><i class="fas fa-phone"></i> 0427-236897</li><li><i class="fas fa-envelope"></i> info@circularfuture.com</li><li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li></ul></div></div>
+  </div></div></div>
+  <div class="footer-bottom"><div class="container"><p>&copy; 2026 CircularFuture. All rights reserved. | Empowering a Sustainable Tomorrow</p></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
